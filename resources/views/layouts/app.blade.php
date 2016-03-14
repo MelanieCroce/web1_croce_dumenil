@@ -19,6 +19,10 @@
         body {
             font-family: 'Lato';
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ebc5ecf5df03cbeda90c6737308b63fd4b834ac5
         .fa-btn {
             margin-right: 6px;
         }
@@ -71,6 +75,7 @@
         </div>
     </nav>
 
+<<<<<<< HEAD
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -84,10 +89,17 @@
             </div>
         </div>
     </div>
+=======
+    @yield('content')
+>>>>>>> ebc5ecf5df03cbeda90c6737308b63fd4b834ac5
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> ebc5ecf5df03cbeda90c6737308b63fd4b834ac5

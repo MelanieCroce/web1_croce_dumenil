@@ -1,11 +1,13 @@
 @extends('layouts.app')
-{{ $pageTitle = 'Email j'sais pas quoi' }}
+
 
 <!-- Main Content -->
 @section('content')
-
-
-                <div class="panel-heading">{{ $pageTitle }}</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Reset Password</div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -38,5 +40,9 @@
                             </div>
                         </div>
                     </form>
+            </div>
+        </div>
+    </div>
+>>>>>>> ebc5ecf5df03cbeda90c6737308b63fd4b834ac5
 </div>
 @endsection
