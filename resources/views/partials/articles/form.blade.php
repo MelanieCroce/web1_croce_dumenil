@@ -10,6 +10,7 @@
             'placeholder' => 'Nom de l\'article'
         ]) !!}
     </div>
+	<input type="hidden" name="_method" value="posts">
 
     <div class="form-group">
         {!! Form::textarea('content', null, ['class' => 'form-control']) !!}

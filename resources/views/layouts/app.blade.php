@@ -19,10 +19,6 @@
         body {
             font-family: 'Lato';
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> ebc5ecf5df03cbeda90c6737308b63fd4b834ac5
         .fa-btn {
             margin-right: 6px;
         }
@@ -50,7 +46,9 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ route('articles.index') }}">Home</a></li>
+					<li><a href="{{ route('articles.create') }}">Envoyer un projet</a></li>
+					<li><a href="{{ route('articles.create') }}">Ecrire un article</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -75,31 +73,11 @@
         </div>
     </nav>
 
-<<<<<<< HEAD
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-heading">{{$pageTitle}}</div>
-
-                    <div class="panel-body">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-=======
     @yield('content')
->>>>>>> ebc5ecf5df03cbeda90c6737308b63fd4b834ac5
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> ebc5ecf5df03cbeda90c6737308b63fd4b834ac5

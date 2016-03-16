@@ -74,14 +74,9 @@
                             </div>
                         </div>
                     </form>
-<<<<<<< HEAD
-</div>
-
-=======
                 </div>
             </div>
         </div>
     </div>
 </div>
->>>>>>> ebc5ecf5df03cbeda90c6737308b63fd4b834ac5
 @endsection

@@ -8,8 +8,12 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page.
+                    <button>Envoyer un projet</button>
+					<button>Ecrire un article</button>
                 </div>
+				<div class="panel-body">
+						
+				</div>
             </div>
         </div>
     </div>

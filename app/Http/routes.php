@@ -10,6 +10,7 @@
 |
 */
 use Illuminate\Http\Request;
+	
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -21,11 +22,10 @@ use Illuminate\Http\Request;
 |
 */
 Route::group(['middleware' => ['web']], function () {
-    //
-});
-
-Route::group(['middleware' => 'web'], function () {
+	Route::resource('/articles', 'PostController');
     Route::auth();
-
+    Route::get('/', function () {
+        return view('/home');
+    });
     Route::get('/home', 'HomeController@index');
 });
