@@ -22,10 +22,17 @@ use Illuminate\Http\Request;
 |
 */
 Route::group(['middleware' => ['web']], function () {
-	Route::resource('/articles', 'PostController');
+	Route::resource('articles', 'PostController');
+	Route::resource('admin', 'AdminController');
+	Route::resource('profil', 'ProfilController');
+	
+	Route::get('admin/articles', 'AdminController@articles');
+	
+	
     Route::auth();
     Route::get('/', function () {
         return view('/home');
     });
+	
     Route::get('/home', 'HomeController@index');
 });

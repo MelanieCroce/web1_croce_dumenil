@@ -13,11 +13,11 @@ class AddColumnTable extends Migration
     public function up()
     {
 		Schema::table('comments', function (Blueprint $table) {
-            $table->integer('posts_id')->unsigned()->after('id');
-            $table->foreign('posts_id')->references('id')->on('posts');
+            $table->integer('post_id')->unsigned()->after('id');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
 
-            $table->integer('users_id')->unsigned()->after('id');
-            $table->foreign('users_id')->references('id')->on('users');			
+            $table->integer('user_id')->unsigned()->after('id');
+            $table->foreign('user_id')->references('id')->on('users');			
         });
     }
 

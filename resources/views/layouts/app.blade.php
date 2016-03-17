@@ -49,6 +49,7 @@
                     <li><a href="{{ route('articles.index') }}">Home</a></li>
 					<li><a href="{{ route('articles.create') }}">Envoyer un projet</a></li>
 					<li><a href="{{ route('articles.create') }}">Ecrire un article</a></li>
+					<li><a href="{{ route('admin.index') }}">Administration</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -64,6 +65,7 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+								<li><a href=" {{ url('/profil') }}">Profil</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
