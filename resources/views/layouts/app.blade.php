@@ -49,7 +49,9 @@
                     <li><a href="{{ route('articles.index') }}">Home</a></li>
 					<li><a href="{{ route('articles.create') }}">Envoyer un projet</a></li>
 					<li><a href="{{ route('articles.create') }}">Ecrire un article</a></li>
-					<li><a href="{{ route('admin.index') }}">Administration</a></li>
+					@if(Auth::check() && Auth::user()->rang == 1)
+						<li><a href="{{ url('admin') }}">Administration</a></li>
+					@endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->

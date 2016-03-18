@@ -25,8 +25,9 @@ Route::group(['middleware' => ['web']], function () {
 	Route::resource('articles', 'PostController');
 	Route::resource('admin', 'AdminController');
 	Route::resource('profil', 'ProfilController');
-	
+	Route::get('/admin', 'AdminController@index')->middleware('AdminMiddleware');
 	Route::get('admin/articles', 'AdminController@articles');
+
 	
 	
     Route::auth();
