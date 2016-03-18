@@ -1,0 +1,21 @@
+body {
+	background: #547D72;
+}
+
+.box {
+	background: #E8E7BD;
+    margin: 0;
+    padding: 5px 25px;
+    box-shadow: 0 0 10px black inset;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.box_articles {
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+}
+
+.container {
+	width: 100%!important;
+}

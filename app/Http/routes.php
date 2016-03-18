@@ -25,15 +25,13 @@ Route::group(['middleware' => ['web']], function () {
 	Route::resource('articles', 'PostController');
 	Route::resource('admin', 'AdminController');
 	Route::resource('profil', 'ProfilController');
+	
 	Route::get('/admin', 'AdminController@index')->middleware('AdminMiddleware');
 	Route::get('admin/articles', 'AdminController@articles');
-
-	
+	Route::get('/', 'PostController@index');
 	
     Route::auth();
-    Route::get('/', function () {
-        return view('/home');
-    });
+
 	
-    Route::get('/home', 'HomeController@index');
+
 });
