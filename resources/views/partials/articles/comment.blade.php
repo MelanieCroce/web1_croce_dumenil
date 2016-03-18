@@ -6,4 +6,3 @@
 	<input type="hidden" name="id" value="{{ $id_post }}" />
 
     {!! Form::submit('Envoyer un commentaire', ['class' => 'btn btn-block']) !!}
-@include('partials.articles.errors')

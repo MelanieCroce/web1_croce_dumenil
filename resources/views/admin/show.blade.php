@@ -24,8 +24,22 @@
 				{!! Form::close() !!}
 		@endforeach
 
-	@elseif ($id == 'projets') 
+	@elseif ($id == 'projets')
+		@foreach($project as $project)
+			<h3>{{$project->name}}</h3>
+			<p>{{$project->demande}}</p>
+			<a href="{{route('ProjectController.show', $project->id)}}">
+				<button>Voir le projet</button>
+			</a>
 
+			<a href="{{route('articles.index', $project->id, 'project')}}">
+				<button>Editer le projet</button>
+			</a>
+
+
+
+			@endforeach
+		
 
 	@elseif ($id == 'comments')
 

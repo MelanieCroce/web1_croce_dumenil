@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>IIM - BAP </title>
+    <title>Laravel</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -14,8 +14,15 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+    <style>
+        body {
+            font-family: 'Lato';
+        }
+        .fa-btn {
+            margin-right: 6px;
+        }
+    </style>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default">
@@ -40,11 +47,10 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ route('articles.index') }}">Home</a></li>
-					<li><a href="{{ route('articles.create') }}">Envoyer un projet</a></li>
+					<li><a href="{{ url('/project') }}">Envoyer un projet</a></li>
 					<li><a href="{{ route('articles.create') }}">Ecrire un article</a></li>
-					@if(Auth::check() && Auth::user()->rang == 1)
-						<li><a href="{{ url('admin') }}">Administration</a></li>
-					@endif
+					<li><a href="{{ route('admin.index') }}">Administration</a></li>
+                    <li><a href="{{ url('/contact') }}">contact</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -70,13 +76,8 @@
         </div>
     </nav>
 
-	<div class="container">
-		<div class="col-md-1"></div>
-		<div class="col-md-10 box">
-    		@yield('content')
-		</div>
-		<div class="col-md-1"></div>
-	</div>
+    @yield('content')
+
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
