@@ -29,7 +29,6 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
-			
         ],
 
         'api' => [
@@ -50,8 +49,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verifmessage' => \Illuminate\Routing\Middleware\VerifMessage::class,
-		'AdminMiddleware' => \App\Http\Middleware\AdminMiddleware::class,
-
 		
     ];
 }

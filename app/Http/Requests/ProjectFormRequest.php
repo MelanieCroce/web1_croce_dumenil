@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class validateComRequest extends Request
+class ProjectFormRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class validateComRequest extends Request
      */
     public function authorize()
     {
-		return true;
+        return true;
     }
 
     /**
@@ -24,15 +24,9 @@ class validateComRequest extends Request
     public function rules()
     {
         return [
-			'content' => 'required|min:10'
-		];
+            'name' => 'required',
+            'email' => 'required|email',
+
+        ];
     }
-	
-    public function messages()
-    {
-        return [
-			'content.required' => 'Commentaire obligatoire', 
-			'content.min' => 'Commentaire supérieur à 10 caractères'
-		];
-    }	
 }

@@ -7,7 +7,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Requests\ProfilRequest;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -32,11 +31,11 @@ class ProfilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProfilRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $users = User::find($id);
-        $users ->name    = $request->name;
-        $users ->email	 = $request->email;
+        $users ->name   = $request->name;
+        $users ->email = $request->email;
         $users->password = $request->password;
         $users ->update();
         return redirect()->route('articles.index', $users->id);

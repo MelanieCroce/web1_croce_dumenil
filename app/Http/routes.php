@@ -26,12 +26,23 @@ Route::group(['middleware' => ['web']], function () {
 	Route::resource('admin', 'AdminController');
 	Route::resource('profil', 'ProfilController');
 	
-	Route::get('/admin', 'AdminController@index')->middleware('AdminMiddleware');
 	Route::get('admin/articles', 'AdminController@articles');
-	Route::get('/', 'PostController@index');
+	
 	
     Route::auth();
-
+    Route::get('/', function () {
+        return view('/home');
+    });
 	
+    Route::get('/home', 'HomeController@index');
 
+    Route::get('contact',
+        ['as' => 'contact', 'uses' => 'ContactController@create']);
+    Route::post('contact',
+        ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
+    Route::get('project',
+        ['as' => 'project', 'uses' => 'ProjectController@create']);
+    Route::post('project',
+        ['as' => 'project_store', 'uses' => 'ProjectController@store']);
 });
